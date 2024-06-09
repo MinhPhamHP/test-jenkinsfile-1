@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            step {
+            steps {
                 git 'https://github.com/MinhPhamHP/test-jenkinsfile-1'
             }
         }
