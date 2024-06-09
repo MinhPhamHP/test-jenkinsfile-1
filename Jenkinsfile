@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/MinhPhamHP/test-jenkinsfile-1'
-                sh 'cp index.html index-testsh.html'
+                dir('/var/lib/jenkins/workspace/pipeline_project-v1') {
+                    git 'https://github.com/MinhPhamHP/test-jenkinsfile-1'
+                    sh 'cp index.html index-testsh.html'
+                }
             }
         }
     }
